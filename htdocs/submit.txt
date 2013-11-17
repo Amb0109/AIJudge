@@ -1,0 +1,70 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `gs_submit`(
+       p_userid                   int,       
+       p_gameid                   int,
+       p_submittime               int,
+       p_language                 tinyint,       
+       p_codelength               int,                 
+       p_code                     mediumtext
+)
+BEGIN
+     DECLARE stmt                 mediumtext;
+     DECLARE v_userid             int;     
+     DECLARE v_insertedid         int;
+
+     SET @v_query = CONCAT('INSERT INTO ',
+         'web_submition',
+         '(userId,gameId,submitDate,language,codeLength) VALUES(',
+         p_userid, ',',
+         p_gameid, ',',
+         p_submittime, ',',
+         p_language, ',',         
+         p_codelength,
+         ');');
+         
+     PREPARE stmt from @v_query;
+     EXECUTE stmt;
+     DEALLOCATE PREPARE stmt;
+
+     SELECT LAST_INSERT_ID() INTO v_insertedid;
+     SET @v_query = CONCAT('INSERT INTO ',
+         'web_source',
+         '(runId, srcCode) VALUES(',v_insertedid, ',',
+         '''', p_code ,'''',         
+         ');' );
+         
+     PREPARE stmt from @v_query;
+     EXECUTE stmt;
+     DEALLOCATE PREPARE stmt;
+
+     SET @v_query = CONCAT('UPDATE web_game SET tried = tried + 1 WHERE gameId = ',
+          p_gameid );
+         
+     PREPARE stmt from @v_query;
+     EXECUTE stmt;
+     DEALLOCATE PREPARE stmt; 
+
+
+     /*SELECT COUNT(*) INTO v_userid FROM web_user WHERE userId = p_userid AND game_id = p_gameid;
+     IF( v_userid <= 0) THEN
+        SET @v_query = CONCAT('INSERT INTO ',
+         'gs_user',
+         '(user_id, game_id, tried, score) VALUES(',
+          p_userid,', ', 
+          p_gameid ,',1,0', 
+         ');' );
+         
+         PREPARE stmt from @v_query;
+         EXECUTE stmt;
+         DEALLOCATE PREPARE stmt;
+     END IF;     
+
+     IF( v_userid > 0) THEN
+        SET @v_query = CONCAT('UPDATE gs_user SET tried = tried + 1 WHERE user_id = ',
+          p_userid,' AND game_id = ', p_gameid );
+         
+         PREPARE stmt from @v_query;
+         EXECUTE stmt;
+         DEALLOCATE PREPARE stmt;
+     END IF;     */
+     
+END;

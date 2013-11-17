@@ -1,0 +1,57 @@
+﻿<!-- BEGIN:register -->
+<div id="container" class="container">
+	<div class="container-fluid">
+		<div class="{register_class}">
+			<ul>
+				{register_error}
+			</ul>
+		</div>
+		<div class="login">
+			<div id = "tit" >Register New Account</div>
+			
+	    	<form action="register.php?action=go" method = "post" class="form-horizontal">
+	    		<div class="control-group">
+					<label class="control-label" for="UserName">UserName：</label>
+					<div class="controls" >
+						<input class="span3" type="text" maxLength="12" id="GameID" name="username" placeholder="UserName" value="{username}" />
+					</div>
+				</div>
+				<div class="control-group" >
+					<label class="control-label" for="Password">PassWord：</label>
+					<div class="controls" >
+						<input class="span3" maxLength="18" type="password" id="password" name="password" placeholder="PassWord" />
+					</div>
+				</div>
+				<div class="control-group" >
+					<label class="control-label" for="Confirm Password">Confirm PW：</label>
+					<div class="controls" >
+						<input class="span3" maxLength="18" type="password" id="password2" name="password2" placeholder="Confirm Password" />
+					</div>
+				</div>
+				<div class="control-group" >
+					<label class="control-label" for="Email">E-mail：</label>
+					<div class="controls" >
+						<input class="span3" type="text" id="email" name="email" placeholder="Email" value="{email}" />
+					</div>
+				</div>
+				<div class="control-group" >
+					<label class="control-label" for="nickname">NickName：</label>
+					<div class="controls" >
+						<input class="span3" type="text" id="nickname" name="nickname" placeholder="NickName" value="{nickname}" />
+					</div>
+				</div>
+				<div class="control-group" >
+					<label class="control-label" for="Verify">Verify Code：</label>
+					<div class="controls" >
+						<img src="/resources/ck.php" />
+						<input class="span2" type="text" id="verify" name="verify" placeholder="Verify Code" />
+					</div>
+				</div>
+				<div class="sub">
+	    			<button class="btn btn-primary span3" type = "submit" >Register</button>
+	    		</div>
+	    	</form>
+		</div>
+	</div>
+</div>
+<!-- END:register -->

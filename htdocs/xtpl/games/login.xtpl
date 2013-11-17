@@ -1,0 +1,27 @@
+﻿<!-- BEGIN:login -->
+<div id="container" class="container">
+	<div class="container-fluid">
+		<div class="login">
+			<div id = "tit" >Sign In Your Account</div>
+			<div id = "error">{error_msg}</div>
+	    	<form action="login.php?go=login" method = "post" class="form-horizontal">
+	    		<div class="control-group">
+					<label class="control-label" for="UserName">UserName：</label>
+					<div class="controls" >
+						<input class="span3" type="text" id="username" name="username" placeholder="UserName" />
+					</div>
+				</div>
+				<div class="control-group" >
+					<label class="control-label" for="Password">PassWord：</label>
+					<div class="controls" >
+						<input class="span3" type="password" id="password" name="password" placeholder="PassWord" />
+					</div>
+				</div>
+				<div class="sub">
+	    			<button class="btn btn-primary span3" type = "submit" >Login</button>
+	    		</div>
+	    	</form>
+		</div>
+	</div>
+</div>
+<!-- END:login -->

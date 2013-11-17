@@ -1,0 +1,54 @@
+<!-- BEGIN:submit -->
+<div id="container" class="container">
+	<div class="container-fluid">
+		<div class="row-fluid">
+		    <div class="span12">
+		    	<h2>{game_title}</h2>
+				<div class="tabbable"> 
+				  <ul class="nav nav-tabs">
+				    <li><a href="./index.php?pid={game_id}">Home</a></li>
+				    <li><a href="./faq.php?pid={game_id}">FAQ</a></li>
+				    <li class="active"><a href="./submit.php?pid={game_id}">Submit</a></li>
+				    <li><a href="./status.php?pid={game_id}">My status</a></li>
+				    <li><a href="./match.php?pid={game_id}">Match</a></li>
+				    <!--<li><a href="./ranklist.php?pid={game_id}">Ranklist</a></li>-->
+				  </ul>
+				</div>
+				<form class="form-horizontal" action="submit.php?go=submit" method="post" style="margin-left:100px;">
+					<div class="control-group">
+						<label class="control-label" for="GameID">Game ID：</label>
+						<div class="controls" >
+							<input type="text" id="GameID" name="pid" placeholder="GameID" value="{game_id}" />
+						</div>
+					</div>
+
+					<div class="control-group" >
+						<label class="control-label" for="Language">Language：</label>
+						<div class="controls">
+							<select name="language">
+								<option value="0" selected>G++</option>
+								<option value="1">GCC</option>
+							</select>
+						</div>
+					</div>
+					<div class="control-group">
+					<font color=red>{submit_msg}</font>
+					</div>
+					<div class="control-group">
+						<textarea type="text" class="offset1 span8" rows="16" name="code" placeholder="Source Code...">{wrong_code}</textarea>
+					</div>
+
+					<div class="control-group">
+						<div class="controls">
+							<button class="btn btn-primary" type="submit">Submit</button>
+						</div>
+					</div>
+				</form>
+		    </div>
+		    <div class="span2">
+		      	<!--Sidebar content-->
+		    </div>
+		</div>
+	</div>
+</div>
+<!-- END:submit -->

@@ -1,0 +1,37 @@
+<div>
+  <p><b># 游戏玩法</b></p>
+  <p>要求程序每次在收到 <code>Start</code> 输入之后输出<code>Rock</code>, <code>Paper</code>, <code>Scissors</code> 三个中的一个
+</div>
+<br>
+<div>
+  <p><b># 注意事项</b></p>
+  <p>程序在输出后需要添加<code>fflush(stdout);</code>语句来刷新缓冲区</p>
+  <p>CPU时限10s，内存限制64MB。</p>
+  <p>程序不需要自动退出，如果游戏中某方玩家程序退出，超时，超内存或者程序出错则判为对方胜利</p>
+</div>
+<br>
+<div>
+<p><b># 样例代码</b></p>
+<pre>
+#include <cstdio>
+#include <cstring>
+#include <cstdlib>
+using namespace std;
+
+const char* RPS[] = {
+	"Rock",
+	"Paper",
+	"Scissors"
+};
+
+int main()
+{
+	while(true)
+	{
+		scanf("%*s");
+		puts(RPS[rand()%3]);
+		fflush(stdout);
+	}
+}
+</pre>
+</div>

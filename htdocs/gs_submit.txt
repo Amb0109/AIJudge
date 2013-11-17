@@ -1,0 +1,73 @@
+/*
+ *提交代码的存储过程
+ *
+ */
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `gs_submit`(
+       p_userid                   int,       
+       p_gameid                   int,
+       p_submittime               int,
+       p_language                 tinyint,
+       p_code                     mediumtext CHARACTER SET utf8
+)
+BEGIN
+     DECLARE stmt                 mediumtext;
+     DECLARE v_userid             int;
+
+     SET @v_query = CONCAT('INSERT INTO ',
+         'gs_status',
+         '(user_id,game_id,submittime,language) VALUES(',
+         p_userid, ',',
+         p_gameid, ',',
+         p_submittime, ',',
+         p_language,
+         ');');
+         
+     PREPARE stmt from @v_query;
+     EXECUTE stmt;
+     DEALLOCATE PREPARE stmt;
+
+     
+     SET @v_query = CONCAT('INSERT INTO ',
+         'gs_source',
+         '(src_code) VALUES(',
+         '''', p_code ,'''',         
+         ');' );
+         
+     PREPARE stmt from @v_query;
+     EXECUTE stmt;
+     DEALLOCATE PREPARE stmt;     
+
+     SET @v_query = CONCAT('UPDATE gs_games SET tried = tried + 1 WHERE game_id = ',
+          p_gameid );
+         
+     PREPARE stmt from @v_query;
+     EXECUTE stmt;
+     DEALLOCATE PREPARE stmt; 
+
+
+     SELECT COUNT(*) INTO v_userid FROM gs_user WHERE user_id = p_userid AND game_id = p_gameid;
+     IF( v_userid <= 0) THEN
+        SET @v_query = CONCAT('INSERT INTO ',
+         'gs_user',
+         '(user_id, game_id, tried, score) VALUES(',
+          p_userid,', ', 
+          p_gameid ,',1,0', 
+         ');' );
+         
+         PREPARE stmt from @v_query;
+         EXECUTE stmt;
+         DEALLOCATE PREPARE stmt;
+     END IF;     
+
+     IF( v_userid > 0) THEN
+        SET @v_query = CONCAT('UPDATE gs_user SET tried = tried + 1 WHERE user_id = ',
+          p_userid,' AND game_id = ', p_gameid );
+         
+         PREPARE stmt from @v_query;
+         EXECUTE stmt;
+         DEALLOCATE PREPARE stmt;
+     END IF;     
+     
+END;

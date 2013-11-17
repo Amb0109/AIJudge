@@ -1,0 +1,47 @@
+<!-- BEGIN:status -->
+<div style="display:none;" id="codebord">
+	<div style="display:none;" id="showcode"></div>
+</div>
+<div id="container" class="container">
+	<div class="container-fluid">
+		<div class="row-fluid">
+		    <div class="span12">
+		    	<h2>{game_title}</h2>
+				<div class="tabbable"> 
+				  	<ul class="nav nav-tabs">
+				   	<li><a href="./index.php?pid={game_id}">Home</a></li>
+				    <li><a href="./faq.php?pid={game_id}">FAQ</a></li>
+				    <li><a href="./submit.php?pid={game_id}">Submit</a></li>
+				    <li class="active"><a href="./status.php?pid={game_id}">My status</a></li>
+				    <li><a href="./match.php?pid={game_id}">Match</a></li>
+				    <!--<li><a href="./ranklist.php?pid={game_id}">Ranklist</a></li>-->
+				  	</ul>
+				  	<table class="table table-striped" >
+						<tbody>
+						<tr>
+							<th width=10%>Runid</th>
+							<th width=20%>Submit Time</th>
+							<th width=15%>Code Length</th>
+							<th width=15%>Language</th>
+							<th width=20% align=center>Status</th>
+							<th width=20% align=center>Author</th>
+						</tr>
+						<!-- BEGIN:status_row -->
+						<tr>
+							<!-- BEGIN:status_col -->
+							<td>{status_info}</td>
+							<!-- END:status_col -->
+						</tr>
+						<!-- END:status_row -->
+						</tbody>
+					</table>
+				</div>
+		    </div>
+		</div>
+	</div>
+</div>
+<div id="rank">
+	{page_link}
+</div>
+
+<!-- END:status -->

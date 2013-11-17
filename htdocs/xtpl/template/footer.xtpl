@@ -1,0 +1,15 @@
+﻿<!-- BEGIN: footer -->
+	<div class = "footer">
+		<div class = "copyright">
+			Hangzhou Dianzi University Online Judge.<br />
+			Copyright &copy; <a  href="mailto:acm@hdu.edu.cn">HDU ACM Team</a>.&nbsp;All Rights Reserved.<br />
+			<font color="green"> Server time:{server_time},Gzip:{gzip}. </font>
+		</div>
+	</div>
+	<script src="{jq_path}"></script>
+	<script src="{bootstrap_js_path}"></script>
+	<script src="{gs_js_path}"></script>
+  </body>
+</html>
+
+<!-- END: footer -->

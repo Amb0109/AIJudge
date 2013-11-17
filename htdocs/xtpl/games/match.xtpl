@@ -1,0 +1,43 @@
+<!-- BEGIN:match -->
+<div style="display:none;" id="codebord"></div>
+<div id="container" class="container">
+	<div class="container-fluid">
+		<div class="row-fluid">
+		    <div class="span12">
+		    	<h2>{game_title}</h2>
+				<div class="tabbable"> 
+				  	<ul class="nav nav-tabs">
+				   	<li><a href="./index.php?pid={game_id}">Home</a></li>
+				    <li><a href="./faq.php?pid={game_id}">FAQ</a></li>
+				    <li><a href="./submit.php?pid={game_id}">Submit</a></li>
+				    <li><a href="./status.php?pid={game_id}">My status</a></li>
+				    <li class="active"><a href="./match.php?pid={game_id}">Match</a></li>
+				    <!--<li><a href="./ranklist.php?pid={game_id}">Ranklist</a></li>-->
+				  	</ul>
+				  	<table class="table table-striped" >
+						<tbody>
+						<tr>
+							<th width=20%>Author</th>
+							<th width=10%>Runid</th>
+							<th width=30%>Submit Time</th>
+							<th width=40% colspan=2>Match</th>
+						</tr>
+						<!-- BEGIN:match_row -->
+						<tr>
+							<!-- BEGIN:match_col -->
+							<td>{match_info}</td>
+							<!-- END:match_col -->
+						</tr>
+						<!-- END:match_row -->
+						</tbody>
+					</table>
+				</div>
+		    </div>
+		</div>
+	</div>
+</div>
+<div id="rank">
+	{page_link}
+</div>
+
+<!-- END:match -->

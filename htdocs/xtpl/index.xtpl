@@ -1,0 +1,30 @@
+<!-- BEGIN:index -->
+<div id="container" class="container">
+	<div class="container-fluid">
+		<div class="row-fluid">
+		    <div class="span12">
+		    	<h2>{game_title}</h2>
+				<div class="tabbable"> 
+				  <ul class="nav nav-tabs">
+				    <li class="active"><a href="/view/games/index.php?pid={game_id}">Home</a></li>
+				    <li><a href="/view/games/faq.php?pid={game_id}">FAQ</a></li>
+				    <li><a href="/view/games/submit.php?pid={game_id}">Submit</a></li>
+				    <li><a href="/view/games/status.php?pid={game_id}">My status</a></li>
+				    <li><a href="/view/games/ranklist.php?pid={game_id}">Ranklist</a></li>
+				  </ul>
+				  <div class="tab-content">
+				  	<div class="tab-pane active" id="tab_home"></div>
+				  	<div class="tab-pane" id="tab_faq">game_faq</div>
+				  	<div class="tab-pane" id="tab_submit">game_submit</div>
+				  	<div class="tab-pane" id="tab_mystatus">game_mystatus</div>
+				  	<div class="tab-pane" id="tab_ranklist">game_ranklist</div>
+				  </div>
+				</div>
+		    </div>
+		    <div class="span2">
+		      	<!--Sidebar content-->
+		    </div>
+		</div>
+	</div>
+</div>
+<!-- END:index -->

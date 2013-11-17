@@ -1,0 +1,315 @@
+<!-- BEGIN:replay -->
+<div id="container" class="container">
+	<div class="container-fluid">
+		<div class="row-fluid">
+		    <div class="span12">
+		    	<h2>{game_title}</h2>
+				<div class="tabbable"> 
+				  	<ul class="nav nav-tabs">
+					    <li><a href="./index.php?pid={game_id}">Home</a></li>
+					    <li><a href="./faq.php?pid={game_id}">FAQ</a></li>
+					    <li><a href="./submit.php?pid={game_id}">Submit</a></li>
+					    <li><a href="./status.php?pid={game_id}">My status</a></li>
+					    <li><a href="./match.php?pid={game_id}">Match</a></li>
+					    <!--<li><a href="./ranklist.php?pid={game_id}">Ranklist</a></li>-->
+					    <li class="active"><a href="./replay.php?mid={game_mid}&pid={game_id}">Replay</a></li>
+					</ul>
+				</div>
+				<div class = "text">
+					<div style="text-align:center;width:100%;margin-bottom:30px;color:red;font-size:19px;">{judge_error}</div>
+					<table align=center width="100%">
+					<tr>
+					<td width=30% style="background-color:#d9edf7;border:1px solid #ddd">
+					<div class="user-left">
+						<div class="user-left-head">
+							<img src="/resources/black.png" />&nbsp;&nbsp;{game_black}
+						</div>
+						<div class="user-left-body">
+							<div class="user-left-body-left">
+								Chess 
+							</div>
+							<div class="user-left-body-right">
+								{black_chess}
+							</div>
+						</div>
+						<div class="user-left-foot">
+							{black_judge}
+						</div>
+					</div>
+					</td>
+					<td width=40%>
+					  	<table cellPadding=1 cellSpacing=3 border=0 align=center>
+							<tr>
+								<td><img data-id="0-0" src="/resources/othello-green.png" width="24"></td>
+								<td><img data-id="0-1" src="/resources/othello-green.png" width="24"></td>
+					       		<td><img data-id="0-2" src="/resources/othello-green.png" width="24"></td>
+					       		<td><img data-id="0-3" src="/resources/othello-green.png" width="24"></td>
+					       		<td><img data-id="0-4" src="/resources/othello-green.png" width="24"></td>
+					       		<td><img data-id="0-5" src="/resources/othello-green.png" width="24"></td>
+					       		<td><img data-id="0-6" src="/resources/othello-green.png" width="24"></td>
+					       		<td><img data-id="0-7" src="/resources/othello-green.png" width="24"></td>
+					       	</tr>
+					       	<tr>
+					            <td><img data-id="1-0" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="1-1" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="1-2" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="1-3" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="1-4" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="1-5" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="1-6" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="1-7" src="/resources/othello-green.png" width="24"></td>
+					        </tr>
+					        <tr>
+					            <td><img data-id="2-0" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="2-1" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="2-2" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="2-3" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="2-4" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="2-5" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="2-6" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="2-7" src="/resources/othello-green.png" width="24"></td>
+							</tr>
+							<tr>
+					            <td><img data-id="3-0" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="3-1" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="3-2" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="3-3" src="/resources/othello-white.png" width="24"></td>
+					            <td><img data-id="3-4" src="/resources/othello-black.png" width="24"></td>
+					            <td><img data-id="3-5" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="3-6" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="3-7" src="/resources/othello-green.png" width="24"></td>
+							</tr>
+							<tr>
+					            <td><img data-id="4-0" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="4-1" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="4-2" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="4-3" src="/resources/othello-black.png" width="24"></td>
+					            <td><img data-id="4-4" src="/resources/othello-white.png" width="24"></td>
+					            <td><img data-id="4-5" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="4-6" src="/resources/othello-green.png" width="24"></td>
+					        	<td><img data-id="4-7" src="/resources/othello-green.png" width="24"></td>
+							</tr>
+							<tr>
+					            <td><img data-id="5-0" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="5-1" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="5-2" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="5-3" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="5-4" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="5-5" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="5-6" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="5-7" src="/resources/othello-green.png" width="24"></td>
+							</tr>
+							<tr>
+					            <td><img data-id="6-0" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="6-1" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="6-2" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="6-3" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="6-4" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="6-5" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="6-6" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="6-7" src="/resources/othello-green.png" width="24"></td>
+					        </tr>
+					        <tr>
+					            <td><img data-id="7-0" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="7-1" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="7-2" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="7-3" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="7-4" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="7-5" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="7-6" src="/resources/othello-green.png" width="24"></td>
+					            <td><img data-id="7-7" src="/resources/othello-green.png" width="24"></td>
+							</tr>
+						</table>
+					</td>
+					<td  width=30% style="background-color:#d9edf7;border:1px solid #ddd">
+						<div class="user-right">
+							<div class="user-right-head">
+								<img src="/resources/white.png" />&nbsp;&nbsp;{game_white}
+							</div>
+							<div class="user-right-body">
+								<div class="user-right-body-left">
+									Chess :
+								</div>
+								<div class="user-right-body-right">
+									{white_chess}
+								</div>
+							</div>
+						</div>
+						<div class="user-right-foot">
+							{white_judge}
+						</div>
+					</td>
+					</tr>
+				</table>
+				</div>
+				<div class = "replay-start">
+					<button class="btn" id="prev">上一步</button>
+					<button class="btn" id="start" style="display:inline;">开始</button>
+					<button class="btn" id="stop" style="display:none;">停止</button>
+					<button class="btn" id="goon" style="display:none;">继续</button>
+					<button class="btn" id="next">下一步</button>
+				</div>
+		    </div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var cur = 0;
+	var t = 0;
+	var flag = 0;
+	var json = "{json_str}";
+	var str = json.split(",");
+	var node = document.getElementsByTagName("img");
+	var nodelist = new Array();
+	for (var i = 0; i < 8; i ++) {
+		nodelist[i] = new Array();
+		for(var j = 0; j < 8; j ++) {
+			nodelist[i][j] = "";
+		}
+	}
+	var numI = 0;
+	var numJ = 0;
+	for (var i = 0; i < node.length; i ++) {
+		var r = node[i].getAttribute("data-id");
+		if(r != null) {
+			r = r.split("-");
+			if((parseInt(r[0]) >= 0 && parseInt(r[0]) <= 8) && (parseInt(r[1]) >= 0 && parseInt(r[1]) <= 8) ) {
+				nodelist[numI][numJ] = node[i];
+				if(numJ == 7) {
+					numJ = 0;
+					numI ++;
+				} else
+					numJ ++;
+			}
+		}
+	}
+	function next_step(step_num) {
+
+		if(str[step_num][0] == "W")
+			nodelist[parseInt(str[step_num][1])][parseInt(str[step_num][2])].src = "/resources/othello-white.png";
+		else if(str[step_num][0] == "B")
+			nodelist[parseInt(str[step_num][1])][parseInt(str[step_num][2])].src = "/resources/othello-black.png";
+
+		t = setTimeout("next_board(" + step_num + ")", 300);
+	}
+
+	function next_board(step_num) {
+
+		for (var i = 3; i < str[step_num].length; i ++) {
+			if(str[step_num][i] == '.')
+				nodelist[parseInt((i-3)/8)][parseInt((i-3)%8)].src = "/resources/othello-green.png";
+			else if(str[step_num][i] == 'B')
+				nodelist[parseInt((i-3)/8)][parseInt((i-3)%8)].src = "/resources/othello-black.png";
+			else if(str[step_num][i] == 'W')
+				nodelist[parseInt((i-3)/8)][parseInt((i-3)%8)].src = "/resources/othello-white.png";
+			else if(str[step_num][i] == '*')
+				nodelist[parseInt((i-3)/8)][parseInt((i-3)%8)].src = "/resources/othello-green.png";
+		}
+		t = setTimeout("next_move("+step_num + ")", 700);
+	}
+
+	function next_move(step_num) {
+
+		for (var i = 3; i < str[step_num].length; i ++) {
+			if(str[step_num][i] == '*')
+				nodelist[parseInt((i-3)/8)][parseInt((i-3)%8)].src = "/resources/othello-move.png";
+		}
+
+		cur = step_num + 1;
+		if(step_num +1 < str.length) {
+			if(flag == 0)
+				t = setTimeout("next_step(" + (step_num+1) + ")", 1000);
+		}else {
+			cur = 0;
+			document.getElementById("start").style.display = "inline";
+			document.getElementById("goon").style.display = "none";
+			document.getElementById("stop").style.display = "none";
+		}
+	}
+
+	addEvent(document.getElementById("start"), "click", Function("start()"));
+	addEvent(document.getElementById("stop"), "click", Function("stop()"));
+	addEvent(document.getElementById("goon"), "click", Function("goon()"));
+	addEvent(document.getElementById("prev"), "click", Function("prev()"));
+	addEvent(document.getElementById("next"), "click", Function("next()"));
+
+	function start() {
+		flag = 0;
+		document.getElementById("start").style.display = "none";
+		document.getElementById("stop").style.display = "inline";
+		if(cur < str.length)
+			next_step(cur);
+		else {
+			document.getElementById("start").style.display = "inline";
+			document.getElementById("goon").style.display = "none";
+			document.getElementById("stop").style.display = "none";
+		}
+	}
+
+	function stop() {
+
+		document.getElementById("stop").style.display = "none";
+		document.getElementById("goon").style.display = "inline";
+		flag = 1;
+	}
+
+	function goon() {
+		flag = 0;
+		document.getElementById("goon").style.display = "none";
+		document.getElementById("stop").style.display = "inline";
+		if(cur < str.length)
+			next_step(cur);
+		else {
+			document.getElementById("start").style.display = "inline";
+			document.getElementById("goon").style.display = "none";
+			document.getElementById("stop").style.display = "none";
+		}
+	}
+
+	function prev() {
+		flag = 1;
+		
+		document.getElementById("start").style.display = "none"
+		document.getElementById("goon").style.display = "inline";
+		document.getElementById("stop").style.display = "none";
+
+		if(cur-2 >= 0)
+			next_step(cur-2);
+		else {
+			for (var i = 0; i < 8; i ++) {
+				for (var j = 0; j < 8; j ++) {
+					nodelist[i][j].src = "/resources/othello-green.png";
+				}
+			}
+			nodelist[3][3].src = "/resources/othello-white.png";
+			nodelist[3][4].src = "/resources/othello-black.png";
+			nodelist[4][3].src = "/resources/othello-black.png";
+			nodelist[4][4].src = "/resources/othello-white.png";
+			document.getElementById("start").style.display = "inline"
+			document.getElementById("goon").style.display = "none";
+			document.getElementById("stop").style.display = "none";	
+		}
+	}
+
+	function next() {
+		flag = 1;
+
+		document.getElementById("start").style.display = "none"
+		document.getElementById("goon").style.display = "inline";
+		document.getElementById("stop").style.display = "none";
+		
+		if(cur < str.length)
+			next_step(cur);
+	}
+
+
+	function addEvent(node,ev,func) {
+
+		if(window.attachEvent) {
+			node.attachEvent("on"+ev ,func );
+		} else {
+			node.addEventListener(ev ,func ,false );
+		}
+	}
+	</script>
+<!-- END:replay -->
