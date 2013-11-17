@@ -59,7 +59,8 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)\$(ProjectName).lib"
+				AdditionalDependencies="..\..\lib\debug\lib_mysql\libmysql.lib ..\..\lib\debug\lib_json.lib shlwapi.lib psapi.lib"
+				OutputFile="..\..\lib\debug\lib_common.lib"
 				AdditionalLibraryDirectories=""
 			/>
 			<Tool
@@ -160,7 +161,47 @@
 				>
 			</File>
 			<File
+				RelativePath=".\DBObject.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\JsonObject.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\LockedFolder.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\LogFile.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\PipeBase.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ProcBase.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\RatingSys.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\SandBox.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ServiceBase.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ServiceCtrl.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ThreadBase.cpp"
 				>
 			</File>
 		</Filter>
@@ -178,6 +219,18 @@
 				>
 			</File>
 			<File
+				RelativePath=".\DBObject.h"
+				>
+			</File>
+			<File
+				RelativePath=".\JsonObject.h"
+				>
+			</File>
+			<File
+				RelativePath=".\LockedFolder.h"
+				>
+			</File>
+			<File
 				RelativePath=".\LogFile.h"
 				>
 			</File>
@@ -186,7 +239,31 @@
 				>
 			</File>
 			<File
+				RelativePath=".\PipeBase.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ProcBase.h"
+				>
+			</File>
+			<File
 				RelativePath=".\SafeLock.h"
+				>
+			</File>
+			<File
+				RelativePath=".\SandBox.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ServiceBase.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ServiceCtrl.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ThreadBase.h"
 				>
 			</File>
 		</Filter>
