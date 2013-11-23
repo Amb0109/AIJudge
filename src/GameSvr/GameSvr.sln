@@ -1,40 +1,32 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameSvr", "GameSvr.vcproj", "{9FD79D54-A610-4230-ABEF-B7B80ED7E70E}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项目", "解决方案项目", "{8A818D07-C319-4D3E-B60B-12E4ACC036BF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameSvr", "GameSvr.vcxproj", "{9FD79D54-A610-4230-ABEF-B7B80ED7E70E}"
 	ProjectSection(ProjectDependencies) = postProject
-		{B47F1F00-54C9-4D7B-87CD-8FF5DBFD5F4E} = {B47F1F00-54C9-4D7B-87CD-8FF5DBFD5F4E}
+		{A1838E41-ABE6-4F21-9D7B-76AA23CC425D} = {A1838E41-ABE6-4F21-9D7B-76AA23CC425D}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GodMode", "..\GodMode\GodMode.vcproj", "{0A6D227D-8BB1-4FE4-9380-DB2A035C9467}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SafeRun", "..\SafeRun\SafeRun.vcproj", "{C0D6595F-C90D-4B8E-A5F9-40079DE50F48}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GodMode", "..\GodMode\GodMode.vcxproj", "{0A6D227D-8BB1-4FE4-9380-DB2A035C9467}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B47F1F00-54C9-4D7B-87CD-8FF5DBFD5F4E} = {B47F1F00-54C9-4D7B-87CD-8FF5DBFD5F4E}
 		{A1838E41-ABE6-4F21-9D7B-76AA23CC425D} = {A1838E41-ABE6-4F21-9D7B-76AA23CC425D}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_json", "..\lib_json\lib_json.vcproj", "{A1838E41-ABE6-4F21-9D7B-76AA23CC425D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SafeRun", "..\SafeRun\SafeRun.vcxproj", "{C0D6595F-C90D-4B8E-A5F9-40079DE50F48}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项目", "解决方案项目", "{8A818D07-C319-4D3E-B60B-12E4ACC036BF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_json", "..\lib_json\lib_json.vcxproj", "{A1838E41-ABE6-4F21-9D7B-76AA23CC425D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_judger", "..\lib_judger\lib_judger.vcproj", "{E95C8E07-74C8-4099-8DAF-198ADA5D903A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_judger", "..\lib_judger\lib_judger.vcxproj", "{E95C8E07-74C8-4099-8DAF-198ADA5D903A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "judger_othello", "..\judger_othello\judger_othello.vcxproj", "{DC32CDFE-649D-41B8-A50D-2FD6EC9E9298}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_common", "..\lib_common\lib_common.vcxproj", "{B47F1F00-54C9-4D7B-87CD-8FF5DBFD5F4E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "judger_rps", "..\judger_rps\judger_rps.vcxproj", "{37232FF5-E520-48E0-8DFB-3C65668097F7}"
 	ProjectSection(ProjectDependencies) = postProject
-		{B47F1F00-54C9-4D7B-87CD-8FF5DBFD5F4E} = {B47F1F00-54C9-4D7B-87CD-8FF5DBFD5F4E}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "judger_othello", "..\judger_othello\judger_othello.vcproj", "{DC32CDFE-649D-41B8-A50D-2FD6EC9E9298}"
-	ProjectSection(ProjectDependencies) = postProject
-		{E95C8E07-74C8-4099-8DAF-198ADA5D903A} = {E95C8E07-74C8-4099-8DAF-198ADA5D903A}
-		{B47F1F00-54C9-4D7B-87CD-8FF5DBFD5F4E} = {B47F1F00-54C9-4D7B-87CD-8FF5DBFD5F4E}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_common", "..\lib_common\lib_common.vcproj", "{B47F1F00-54C9-4D7B-87CD-8FF5DBFD5F4E}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "judger_rps", "..\judger_rps\judger_rps.vcproj", "{37232FF5-E520-48E0-8DFB-3C65668097F7}"
-	ProjectSection(ProjectDependencies) = postProject
-		{B47F1F00-54C9-4D7B-87CD-8FF5DBFD5F4E} = {B47F1F00-54C9-4D7B-87CD-8FF5DBFD5F4E}
-		{E95C8E07-74C8-4099-8DAF-198ADA5D903A} = {E95C8E07-74C8-4099-8DAF-198ADA5D903A}
+		{A1838E41-ABE6-4F21-9D7B-76AA23CC425D} = {A1838E41-ABE6-4F21-9D7B-76AA23CC425D}
 	EndProjectSection
 EndProject
 Global
